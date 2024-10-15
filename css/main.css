@@ -124,6 +124,10 @@ button:hover span:last-child {
 }
 
 h1 {
+    color: white;
+    text-align: center;
     font-size: 48px;
     margin-top: 40vh;
+    position: relative;
+    z-index: 100;
 }
