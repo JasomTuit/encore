@@ -37,6 +37,22 @@ video {
     z-index: 1000;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
 .side-buttons {
     position: absolute;
     color: white;
@@ -112,6 +128,7 @@ button:hover span:last-child {
 
 .icons {
     position: fixed;
+    color: white;
     top: 20px;
     right: 20px;
     z-index: 1000;
