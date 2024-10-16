@@ -32,6 +32,22 @@ header {
     z-index: 1000;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
 .icons {
     position: fixed;
     top: 20px;
@@ -68,11 +84,28 @@ h1 {
     margin-bottom: 40px;
 }
 
-/* Store-specific styles */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .product-card {
@@ -123,10 +156,10 @@ p {
 }
 
 .button {
-    --width: 150px; /* Adjusted width to fit "Add to Cart" */
-    --height: 45px; /* Increased height slightly for better appearance */
+    --width: 150px;
+    --height: 45px;
     --tooltip-height: 35px;
-    --tooltip-width: 120px; /* Adjusted width for the tooltip */
+    --tooltip-width: 120px;
     --gap-between-tooltip-to-button: 18px;
     --button-color: #222;
     --tooltip-color: #fff;
@@ -138,9 +171,9 @@ p {
     border-radius: 0.5em;
     font-family: "Arial";
     transition: 0.7s;
-    cursor: pointer; /* Make sure the cursor is a pointer */
-    overflow: hidden; /* Prevents overflow from children elements */
-    margin: auto; /* Center the button within the flex container */
+    cursor: pointer;
+    overflow: hidden;
+    margin: auto;
 }
 
 .button::before {
@@ -155,7 +188,7 @@ p {
     line-height: var(--tooltip-height);
     bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
     left: calc(50% - var(--tooltip-width) / 2);
-    text-align: center; /* Centers the tooltip text */
+    text-align: center;
 }
 
 .button::after {
@@ -213,7 +246,7 @@ p {
 }
 
 .button:hover {
-    background: #444; /* Slightly lighter background on hover */
+    background: #444;
 }
 
 .button:hover .text {
