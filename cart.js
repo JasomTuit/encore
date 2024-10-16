@@ -1,39 +1,61 @@
-
-let cart = [];
-
-function addToCart(productName, price) {
-    cart.push({ name: productName, price: price });
-    updateCart();
-    saveCart();
-}
-
-function updateCart() {
+document.addEventListener('DOMContentLoaded', function() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const resetCartButton = document.getElementById('reset-cart');
+    const subtotalElement = document.getElementById('subtotal');
+    const deliveryFeesElement = document.getElementById('delivery-fees');
+    const totalElement = document.getElementById('total');
     const cartStatus = document.querySelector('.cart-status');
-    const subtotal = document.querySelector('.summary-item:nth-child(1) span:last-child');
-    const total = document.querySelector('.summary-item:nth-child(3) span:last-child');
 
-    if (cart.length === 0) {
-        cartStatus.textContent = 'Your Cart is Empty :(';
-        subtotal.textContent = '$0.00';
-        total.textContent = '$0.00';
-    } else {
-        cartStatus.textContent = `${cart.length} item(s) in your cart`;
-        const subtotalValue = cart.reduce((sum, item) => sum + item.price, 0);
-        subtotal.textContent = `$${subtotalValue.toFixed(2)}`;
-        total.textContent = `$${subtotalValue.toFixed(2)}`;
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCartDisplay() {
+        if (cartItemsContainer) {
+            cartItemsContainer.innerHTML = '';
+        }
+        let subtotal = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            if (cartItemsContainer) {
+                cartItemsContainer.appendChild(li);
+            }
+            subtotal += item.price;
+        });
+
+        if (subtotalElement) {
+            subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        }
+        const deliveryFees = 5.00; //Delivery Fees
+        if (deliveryFeesElement) {
+            deliveryFeesElement.textContent = `$${deliveryFees.toFixed(2)}`;
+        }
+        const total = subtotal + deliveryFees;
+        if (totalElement) {
+            totalElement.textContent = `$${total.toFixed(2)}`;
+        }
+        if (cartCount) {
+            cartCount.textContent = cart.length;
+        }
     }
-}
 
-function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
+    window.addToCart = function(name, price) {
+        const item = { name, price };
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+    };
 
-function loadCart() {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-        cart = JSON.parse(savedCart);
-        updateCart();
+    function resetCart() {
+        cart = [];
+        localStorage.removeItem('cart');
+        updateCartDisplay();
     }
-}
 
-document.addEventListener('DOMContentLoaded', loadCart);
+    if (resetCartButton) {
+        resetCartButton.addEventListener('click', resetCart);
+    }
+
+    updateCartDisplay();
+});
