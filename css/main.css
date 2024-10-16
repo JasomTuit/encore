@@ -75,6 +75,7 @@ button {
     text-decoration: none;
     cursor: pointer;
     background: #fff;
+    opacity: 55%;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
