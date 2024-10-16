@@ -1,3 +1,5 @@
+@import url('store.css');
+
 body, html {
     margin: 0;
     padding: 0;
@@ -47,38 +49,45 @@ header {
 
 .content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     flex-grow: 1;
 }
 
-a:link {
+a:link, a:visited, a:hover, a:active {
     color: white;
 }
 
-a:visited {
-    color: white;
+.cart-title {
+    width: 300px;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
-a:hover {
-    color: white;
-}
-
-a:active {
-    color: white;
-}
-
-.cart-status {
-    flex: 1;
+.cart-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}
+
+.cart-items {
+    flex: 1;
     padding: 20px;
     box-sizing: border-box;
 }
 
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+}
+
 .summary {
-    width: 300px;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -106,17 +115,48 @@ a:active {
     margin-top: 20px;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 901px) {
     .content {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .cart-status, .summary {
+    .cart-title {
+        align-self: flex-start;
+        margin-left: 20px;
+    }
+
+    .cart-container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: none;
+    }
+
+    .cart-items {
+        flex: 2;
+        padding-right: 40px;
+    }
+
+    .summary {
+        flex: 1;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .cart-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-items, .summary {
         width: 100%;
+        max-width: 600px;
         padding: 10px;
     }
 
-    .cart-status {
+    .cart-title {
         font-size: 20px;
     }
 
@@ -130,7 +170,7 @@ a:active {
 }
 
 @media (max-width: 600px) {
-    .cart-status {
+    .cart-title {
         font-size: 18px;
     }
 
