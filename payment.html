@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment - Encore</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/payment.css">
+        <link rel="icon" type="image/png" href="media/roundedlogo.png">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <a href="index.html">
+                <div class="logo">
+                    <img src="media/resizedlogo.png" alt="Encore Logo">
+                </div>
+                </a>
+
+                <div class="product-card">
+                    <label for="ccard">Card Number</label>
+                    <input type="text" inputmode="numeric" autocomplete="cc-number" max-length="19" placeholder="xxxx xxxx xxxx xxxx" id="ccard" name="ccard" required>
+                    <label for="date">Expiry Date</label>
+                    <input type="text" inputmode="numeric" autocomplete="cc-number" max-length="19" placeholder="xx/xx" id="date" name="date" required>
+                    <label for="secret">Secret Number</label>
+                    <input type="text" inputmode="numeric" autocomplete="cc-number" max-length="19" placeholder="xxx" id="secret" name="secret" required>
+                    <br>
+
+                    <div class="button" tooltip="Pay">
+                        <div class="button-wrapper">
+                            <div class="text">Purchase</div>
+                            <span class="icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+                <div class="footer">
+                    <div class="h6">
+                        <h6>Training Company in Virtual School Environment, money and products are fictive</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
