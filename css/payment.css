@@ -25,6 +25,10 @@ body, html {
     right: 0;
 }
 
+label {
+    display: flex;
+}
+
 .icons {
     position: fixed;
     color: white;
