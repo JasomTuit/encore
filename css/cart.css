@@ -103,6 +103,12 @@ a:link, a:visited, a:hover, a:active {
     margin-bottom: 10px;
 }
 
+.cart-status {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
 .buy-button {
     display: block;
     width: 100%;
