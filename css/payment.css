@@ -52,6 +52,7 @@ body, html {
 .product-card {
     background-color: #333;
     margin-right: auto;
+    align-content: center;
     margin-top: 15rem;
     margin-left: auto;
     border-radius: 10px;
