@@ -55,29 +55,26 @@ label {
 
 .product-card {
     background-color: #333;
-    margin-right: auto;
-    align-content: center;
+    margin: 0 auto;
     margin-top: 15rem;
-    margin-left: auto;
     border-radius: 10px;
     padding: 20px;
     max-width: 30%;
     overflow: hidden;
-    display: block;
     z-index: 10;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-input[type=text] {
-    display: block;
-    max-width: 90%;
-    padding: 12px 100px;
-    margin: 15px 1px;
-}
-
+input[type=text],
 input[type=number] {
     display: block;
-    max-width: 90%;
-    padding: 12px 100px;
+    width: 90%;
+    padding: 12px;
     margin: 15px 1px;
 }
 
