@@ -109,14 +109,6 @@ a:link, a:visited, a:hover, a:active {
     padding: 10px;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    border-style: solid;
-    border-color: #333;
-    border-radius: 5px;
-}
-
 .buy-button {
     display: block;
     width: 100%;
