@@ -112,6 +112,8 @@ a:link, a:visited, a:hover, a:active {
 button {
     background-color: #333;
     color: #fff;
+    border: none;
+    border-radius: 5px;
 }
 
 .buy-button {
