@@ -26,7 +26,7 @@ body, html {
 }
 
 label {
-    display: flex;
+    display: block;
 }
 
 .icons {
@@ -61,7 +61,7 @@ label {
     margin-left: auto;
     border-radius: 10px;
     padding: 20px;
-    max-width: 50%;
+    max-width: 30%;
     overflow: hidden;
     display: block;
     z-index: 10;
