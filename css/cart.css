@@ -109,6 +109,11 @@ a:link, a:visited, a:hover, a:active {
     padding: 10px;
 }
 
+button {
+    background-color: #333;
+    color: #fff;
+}
+
 .buy-button {
     display: block;
     width: 100%;
