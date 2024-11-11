@@ -99,6 +99,17 @@ h1 {
     margin-bottom: 40px;
 }
 
+button {
+    display: block;
+    width: 100%;
+    paddig: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #333;
+    color: #fff;
+    background-color: #333;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
