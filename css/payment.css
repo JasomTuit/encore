@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #242424;
+    color: #fff;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.h6 {
+    margin: 0 0 0 10px;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+label {
+    display: block;
+}
+
+.icons {
+    position: fixed;
+    color: white;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.icons i {
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    width: 150px;
+    height: auto;
+    z-index: 1000;
+}
+
+.product-card {
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 15rem;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 30%;
+    overflow: hidden;
+    z-index: 10;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type=text],
+input[type=number] {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px 1px;
+}
+
+.button {
+    --width: 150px;
+    --height: 45px;
+    --tooltip-height: 35px;
+    --tooltip-width: 120px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.5em;
+    font-family: "Arial";
+    transition: 0.7s;
+    cursor: pointer;
+    overflow: hidden;
+    margin: auto;
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 0.25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+    text-align: center;
+}
+
+.button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.button-wrapper,
+.text,
+.icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #444;
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
