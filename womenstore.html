@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/store.css">
     <link rel="icon" type="image/png" href="media/roundedlogo.png">
     <script src="cart.js"></script>
+    <script src="store.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,11 +21,9 @@
 
             <div class="content">
                 <div class="icons">
-
                     <a href="cart.html">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-                        
                 </div>
             </div>
         </header>
@@ -34,12 +33,12 @@
         
         <div class="product-grid">
             <div class="product-card">
-                <img src="media/logo.png" alt="Product 1" class="product-image">
+                <img src="media/products/women/jean-jacket.jpeg" alt="Product 1" class="product-image">
                 <div class="product-info">
                     <h2>Encore Jean Jacket - Foggy Blue</h2>
-                    <p>Our stylish jean jacket combines timeless style with durable comfort. Crafted from eco-fiendly materials, it features a tailored fit, versatile design, and iconic button details. Perfect for layering, this jacket adds a touch of modern cool to any outfit.</p>
+                    <p>Our stylish jean jacket combines timeless style with durable comfort. Crafted from eco-friendly materials, it features a tailored fit, versatile design, and iconic button details. Perfect for layering, this jacket adds a touch of modern cool to any outfit.</p>
                     
-                    <div class="button" data-tooltip="PRICE $20" onclick="addToCart('Jean Jacket - Foggy Blue', 20)">
+                    <div class="button" data-tooltip="PRICE $49,99" onclick="addToCart('Jean Jacket - Foggy Blue', 49.99)">
                         <div class="button-wrapper">
                             <div class="text">Add To Cart</div>
                             <span class="icon">
@@ -52,12 +51,12 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="media/logo.png" alt="Product 1" class="product-image">
+                <img src="media/products/women/stylish-dress.jpeg" alt="Product 1" class="product-image">
                 <div class="product-info">
-                    <h2>Encore Dress - Bloody Night</h2>
+                    <h2>Encore Stylish Dress - Bloody Night</h2>
                     <p>This dress is all about effortless style. With its sleek, flattering fit and soft, breathable fabric, it's perfect for anything from brunch to a night out. Easy to dress up or down, this piece is a modern wardrobe essential you’ll wear on repeat.</p>
                     
-                    <div class="button" data-tooltip="PRICE $20" onclick="addToCart('Encore Dress - Bloody Night', 20)">
+                    <div class="button" data-tooltip="PRICE $29,99" onclick="addToCart('Encore Dress - Bloody Night', 29.99)">
                         <div class="button-wrapper">
                             <div class="text">Add To Cart</div>
                             <span class="icon">
@@ -70,12 +69,30 @@
                 </div>
             </div>
             <div class="product-card">
-                <img src="media/logo.png" alt="Product 1" class="product-image">
+                <img src="media/products/women/white-blazer.jpeg" alt="Product 1" class="product-image">
                 <div class="product-info">
                     <h2>Encore Blazer - Snowy White</h2>
-                    <p>A modern take on the classic blazer, this piece offers a sharp, tailored fit with just the right amount of stretch for all-day comfort in any office. Versatile and polished, it’s perfect for elevating your workwear or adding a sophisticated touch to casual outfits. A must-have for any hard-working women.</p>
+                    <p>A modern take on the classic blazer, this piece offers a sharp, tailored fit with just the right amount of stretch for all-day comfort in any office. Perfect for elevating your workwear or adding a little touch to your outfits. A must-have for any hard-working woman.</p>
                     
-                    <div class="button" data-tooltip="PRICE $20" onclick="addToCart('Encore Blazer - Snowy White', 20)">
+                    <div class="button" data-tooltip="PRICE $69,99" onclick="addToCart('Encore Blazer - Snowy White', 69.99)">
+                        <div class="button-wrapper">
+                            <div class="text">Add To Cart</div>
+                            <span class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="media/products/women/fluffy-jacket.jpeg" alt="Product 1" class="product-image">
+                <div class="product-info">
+                    <h2>Encore Fluffy Jacket - Bugs Bunny</h2>
+                    <p>A soft jacket crafted from plush, this material that feels like a warm embrace. With its luxurious texture and fluffy design, it's perfect for staying cozy during colder months. Its relaxed fit and timeless appeal is an essential wardrobe piece for comfort lovers.</p>
+                    
+                    <div class="button" data-tooltip="PRICE $59,99" onclick="addToCart('Encore Fluffy Jacket - Bugs Bunny', 59.99)">
                         <div class="button-wrapper">
                             <div class="text">Add To Cart</div>
                             <span class="icon">
@@ -97,5 +114,6 @@
             <button id="reset-cart">Reset Cart</button>
         </div>
     </div>
+    <footer>Encore is a Testing Company. All of our products are fictive!!!</footer>
 </body>
 </html>

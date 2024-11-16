@@ -14,13 +14,52 @@ function formatExpiryDate(input) {
 
 document.getElementById('card-number').addEventListener('input', function() {
     formatCardNumber(this);
+    validateInputs();
 });
 
 document.getElementById('expiry-date').addEventListener('input', function() {
     formatExpiryDate(this);
+    validateInputs();
 });
 
 document.getElementById('secret-number').addEventListener('input', function() {
     let value = this.value.replace(/\D/g, ''); // Allow only numbers
     this.value = value;
+    validateInputs();
+});
+
+function validateInputs() {
+    const cardNumberInput = document.getElementById('card-number');
+    const expiryDateInput = document.getElementById('expiry-date');
+    const secretNumberInput = document.getElementById('secret-number');
+    const payNowButton = document.querySelector('.button');
+
+    const cardNumber = cardNumberInput.value.trim().replace(/\s/g, '');
+    const expiryDate = expiryDateInput.value.trim();
+    const secretNumber = secretNumberInput.value.trim();
+
+    if (cardNumber.length === 16 && expiryDate.length === 5 && secretNumber.length === 3) {
+        payNowButton.style.pointerEvents = 'auto';
+        payNowButton.style.opacity = '1';
+        payNowButton.removeAttribute('disabled');
+    } else {
+        payNowButton.style.pointerEvents = 'none';
+        payNowButton.style.opacity = '0.5';
+        payNowButton.setAttribute('disabled', 'true');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const payNowButton = document.querySelector('.button');
+    payNowButton.style.pointerEvents = 'none';
+    payNowButton.style.opacity = '0.5';
+    payNowButton.setAttribute('disabled', 'true');
+
+    payNowButton.addEventListener('click', function(event) {
+        if (payNowButton.hasAttribute('disabled')) {
+            event.preventDefault();
+        } else {
+            window.location.href = 'success.html';
+        }
+    });
 });

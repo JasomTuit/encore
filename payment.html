@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encore - Payment</title>
@@ -11,48 +11,47 @@
 </head>
 <body>
     <header>
-            <a href="index.html">
-                <div class="logo">
-                    <img src="media/resizedlogo.png" alt="Encore Logo">
+        <a href="index.html">
+            <div class="logo">
+                <img src="media/resizedlogo.png" alt="Encore Logo">
+            </div>
+        </a>
+
+        <div class="content">
+            <div class="icons">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <h3>Payment Info</h3>
+            
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="#### #### #### ####" maxlength="19">
+            
+            <label for="expiry-date">Expiration Date</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+            
+            <label for="secret-number">Secret Number (CVV)</label>
+            <input type="text" id="secret-number" placeholder="###" maxlength="3">
+            
+            <a href="success.html">
+                <div class="button" disabled>
+                    <div class="button-wrapper">
+                        <div class="text">Pay Now</div>
+                        <span class="icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </span>
+                    </div>
                 </div>
             </a>
-
-            <div class="content">
-                <div class="icons">
-
-                    <a href="cart.html">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                        
-                </div>
-            </div>
-        </header>
-
-<div class="container">
-    <div class="product-card">
-        <h3>Payment Info</h3>
-        
-        <label for="card-number">Card Number</label>
-        <input type="text" id="card-number" placeholder="#### #### #### ####" maxlength="19">
-        
-        <label for="expiry-date">Expiration Date</label>
-        <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
-        
-        <label for="secret-number">Secret Number (CVV)</label>
-        <input type="text" id="secret-number" placeholder="###" maxlength="3">
-        
-        <div class="button">
-                        <div class="button-wrapper">
-                            <div class="text">Pay Now</div>
-                            <span class="icon">
-                                <i class="fa-solid fa-credit-card"></i>
-                            </span>
-                        </div>
-                    </div>
         </div>
-</div>
-    <div class="footer">
-        Encore is a Testing company. All of our products are fictive.
     </div>
+
+    <footer>Encore is a Testing Company. All of our products are fictive!!!</footer>
 </body>
 </html>

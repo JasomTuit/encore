@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const deliveryFeesElement = document.getElementById('delivery-fees');
     const totalElement = document.getElementById('total');
     const cartStatus = document.querySelector('.cart-status');
+    const orderIdElement = document.querySelector('.receipt-header p:first-child');
+    const dateElement = document.querySelector('.receipt-header p:last-child');
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (subtotalElement) {
             subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
         }
-        const deliveryFees = 5.00; //Delivery Fees
+        const deliveryFees = 5.00; // Delivery Fees
         if (deliveryFeesElement) {
             deliveryFeesElement.textContent = `$${deliveryFees.toFixed(2)}`;
         }
@@ -38,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cartCount) {
             cartCount.textContent = cart.length;
         }
+
+        // Update order ID and date
+        const orderId = generateOrderId();
+        const currentDate = new Date().toLocaleDateString();
+        if (orderIdElement) {
+            orderIdElement.textContent = `Order #${orderId}`;
+        }
+        if (dateElement) {
+            dateElement.textContent = `Date: ${currentDate}`;
+        }
+    }
+
+    function generateOrderId() {
+        return Math.floor(Math.random() * 100000);
     }
 
     window.addToCart = function(name, price) {
