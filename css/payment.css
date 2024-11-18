@@ -17,6 +17,11 @@ body, html {
     margin: 0 0 0 10px;
 }
 
+a:link, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
+
 footer {
     min-width: 100%;
     width: 100%;
