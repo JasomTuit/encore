@@ -37,7 +37,7 @@ header {
 .logo {
     position: fixed;
     top: 10px;
-    left: 20px;
+    left: 0px;
     width: 150px;
     height: auto;
     z-index: 1000;
